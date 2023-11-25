@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>EcoBit - Reciclando Com Inteligência</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" th:href="@{/assets/favicon.png}" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link th:href="@{/style/styles.css}" rel="stylesheet" />
+    <!-- JQUERY Libreries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+           <!-- <a class="navbar-brand" th:href="@{resultadoPonto}"><img id="back-btn"
+                    src="https://cdn-icons-png.flaticon.com/512/5649/5649483.png" alt="Botão de voltar." /></a>-->
+        </div>
+    </nav>
+
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-heading text-uppercase">Detalhes</div>
+        </div>
+    </header>
+
+    <!-- LOCAL INFOS-->
+    <section th:if="${ponto}" class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <h3 class="section-heading text-uppercase">Endereço:</h3>
+            <h2 class="section-subheading text-muted" th:text="${ponto.enderecoPonto} + ' - ' + ${ponto.numeroPonto}"></h2><br><br>
+            
+            <h3 class="section-heading text-uppercase">Materiais aceitos:</h3>
+            <h2 class="section-subheading text-muted">
+                <span th:each="materialPonto : ${ponto.materialPonto}" th:text="${materialPonto + ', '}"></span>
+            </h2><br><br>
+            
+            <h3 class="section-heading text-uppercase">Localização:</h3>
+            <div id="map" class="row text-center" style="height: 400px;"></div>
+        </div>
+    </section>
+ 
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Fale Conosco</h2>
+                <h3 class="section-subheading text-muted">Achou um bug ou tem sugestões? Manda pra gente!</h3>
+            </div>
+                 <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Fale Conosco</h2>
+                <h3 class="section-subheading text-muted">Achou um bug ou tem sugestões? Manda pra gente!</h3>
+            </div>
+            <!-- * * * * * * * * * * * * * * *-->
+            <!-- * * SB Forms Contact Form * *-->
+            <!-- * * * * * * * * * * * * * * *-->
+            <!-- This form is pre-integrated with SB Forms.-->
+            <!-- To make this form functional, sign up at-->
+            <!-- https://startbootstrap.com/solution/contact-forms-->
+            <!-- to get an API token!-->
+             <!--COLOCA SEU EMAIL AQUI EMBAIXO-->
+             <form id="contactForm" action="https://formsubmit.co/ajax/eb8edffc6ad813a127869af594ef5de5" method="POST">
+                <div class="row align-items-stretch mb-5">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <!-- Name input-->
+                            <input class="form-control" id="name" name="Nome" type="text" placeholder="Seu Nome *"
+                                required />
+                            <div class="invalid-feedback" data-sb-feedback="name:required">Campo obrigatório.</div>
+                        </div>
+                        <div class="form-group">
+                            <!-- Email address input-->
+                            <input class="form-control" id="email" name="Email" type="email" placeholder="Seu Email *"
+                                data-sb-validations="required,email" required />
+                            <div class="invalid-feedback" data-sb-feedback="email:required">Campo obrigatório.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email não é válido.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-group-textarea mb-md-0">
+                            <!-- Message input-->
+                            <textarea class="form-control" name="mensagem" id="message" placeholder="Sua Mensagem *"
+                                data-sb-validations="required" required></textarea>
+                            <div class="invalid-feedback" data-sb-feedback="message:required" required>Campo
+                                obrigatório.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Submit success message-->
+                <!---->
+                <div class="modal fade" id="submitSuccessModal" tabindex="-1" aria-labelledby="submitSuccessModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="submitSuccessModalLabel">Enviado com sucesso!</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="text-center text-white mb-3">
+                                    <div class="fw-bolder">Enviado com sucesso!</div>
+                                    Para ativar este formulário, inscreva-se em
+                                    <br />
+                                    <a
+                                        href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- This is what your users will see when the form-->
+                <!-- has successfully submitted-->
+                <!-- Submit error message-->
+                <!---->
+                <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Erro ao enviar mensagem!</div>
+                </div>
+                <!-- This is what your users will see when there is-->
+                <!-- an error submitting the form-->
+                <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Erro ao enviar mensagem!</div>
+                </div>
+                <!-- Submit Button-->
+                <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton"
+                        type="submit">Enviar</button></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">Copyright &copy; EcoBit 2023</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none me-3" href="#!">Politica de Privacidade</a>
+                    <a class="link-dark text-decoration-none" href="#!">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script th:src="@{/script/script.js}"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+    <script>
+        function initMap() {
+            const endereco = `[[${ponto.enderecoPonto}]] [[${ponto.numeroPonto}]]`; // Concatena o endereço e o número
+    
+            const geocoder = new google.maps.Geocoder();
+    
+            geocoder.geocode({ 'address': endereco }, function (results, status) {
+                if (status === 'OK') {
+                    const map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 18,
+                        center: results[0].geometry.location,
+                        disableDefaultUI: true,
+                        draggable: false
+                    });
+                    const marker = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                    });
+                } else {
+                    console.error('Geocode falhou devido a: ' + status);
+                }
+            });
+        }
+    
+        // Chamada para iniciar o mapa após a página ser carregada
+        window.onload = function () {
+            initMap();
+        };
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVxmDgi3Ow3NN83doEDjuLKnJ_g6gqCwo&callback=initMap" async defer></script>
+    <script th:src="@{/script/app.js}"></script>
+
+</body>
+
+</html>

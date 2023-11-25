@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>EcoBit - Reciclando Com Inteligência</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" th:href="@{/assets/favicon.png}" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link th:href="@{/style/styles.css}" rel="stylesheet" />
+    <!-- JQUERY Libreries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo2-rem.png" alt="Logo EcoBit" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Recicle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Sobre nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-subheading">Reciclando com Inteligência</div>
+            <div class="masthead-heading text-uppercase">Seja Bem Vindo(a)!</div>
+            <a class="btn btn-primary btn-xl text-uppercase" data-bs-toggle="modal" href="#portfolioModal3">Pesquisar</a>
+        </div>
+    </header>
+
+    <!-- Services-->
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Serviços</h2>
+                <h3 class="section-subheading text-muted">Aqui estão as principais funcionalidades da nossa plataforma.
+                </h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-map-marker-alt fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Pontos de Coleta</h4>
+                    <p class="text-muted">Com EcoBit você pode cadastrar pontos de coleta de diversos materiais ou então
+                        empresas que possuam serviços de reciclagem.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="far fa-trash-alt fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Onde Descartar</h4>
+                    <p class="text-muted">Aqui você pode consultar locais de descarte do seu interesse e visualisar
+                        informações importantes sobre o local, como horário de disponibilidade e o endereço já no mapa!
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Segurança</h4>
+                    <p class="text-muted">Seus dados estão seguros conosco, pode confiar! Não exigimos nenhum dado que
+                        não seja público sobre você ou sua empresa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GRID SERVICES-->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Quero Ajudar!</h2>
+                <h3 class="section-subheading text-muted">O que você deseja hoje? Cadastrar um ponto, empresa ou buscar
+                    um local?</h3>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- POINT SING UP -->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/001.jpeg"
+                                alt="Sígno de ponto de localização com sígno de reciclagem dentro." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Ponto</div>
+                            <div class="portfolio-caption-subheading text-muted">Praças, lojas, shoppings, mercados ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="./assets/img/portfolio/002.jpeg"
+                                alt="Signo de lâmpada de cabeça para baixo com engrenagens dentro e uma planta no topo." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Empresa</div>
+                            <div class="portfolio-caption-subheading text-muted">A sua empresa recicla ou reutiliza?
+                                Show! </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/003.jpeg"
+                                alt="Sígno de lente de aumento com signo de localização dentro." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Procurar</div>
+                            <div class="portfolio-caption-subheading text-muted">Está procurando onde descartar alguma
+                                coisa e não sabe onde? Nós sabemos!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team-->
+    <section class="page-section bg-light" id="team">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Nosso Time</h2>
+                <h3 class="section-subheading text-muted">Quem Faz EcoBit Acontecer.</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/Lucas.jpeg"
+                            alt="Foto de um dos desenvolvedores." />
+                        <h4>Lucas Davi</h4>
+                        <p class="text-muted">Desenvolvedor Fullstack</p>
+                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/EuLucasDavi" aria-label="Parveen Anand Twitter Profile" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/lucas.davi.98" aria-label="Parveen Anand Facebook Profile" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/lucas-davi-2001b412a/" aria-label="Parveen Anand LinkedIn Profile" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/Hugo.jpeg"
+                            alt="Foto de um dos desenvolvedores." />
+                        <h4>Hugo Eiji</h4>
+                        <p class="text-muted">Desenvolvedor Fullstack</p>
+                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/HGEiji" aria-label="Parveen Anand Twitter Profile" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/hugo.eiji.7" aria-label="Parveen Anand Facebook Profile" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/hugo-eiji-ogoshi-9ba26a231/" aria-label="Parveen Anand LinkedIn Profile" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/Thiago.jpeg"
+                            alt="Foto de um dos desenvolvedores." />
+                        <h4>Thiago Correia</h4>
+                        <p class="text-muted">Desenvolvedor Fullstack</p>
+                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/tsc86" aria-label="Parveen Anand Twitter Profile" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/thiago.correa.3979?mibextid=JRoKGi" aria-label="Parveen Anand Facebook Profile" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="www.linkedin.com/in/thiago-scorrea" aria-label="Parveen Anand LinkedIn Profile" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/Camila.jpeg"
+                            alt="Foto de um dos desenvolvedores." />
+                        <h4>Camila Arruda</h4>
+                        <p class="text-muted">Desenvolvedor Fullstack</p>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/Rennan.jpeg"
+                            alt="Foto de um dos desenvolvedores." />
+                        <h4>Renan Venicio</h4>
+                        <p class="text-muted">Desenvolvedor Fullstack</p>
+                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/keikurunu" aria-label="Diana Petersen Twitter Profile" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/renan.venicio.79?mibextid=ZbWKwL"
+                            aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f" target="_blank"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/renan-venicio-88b86b96/"
+                            aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in" target="_blank"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/Savio.jpeg"
+                            alt="Foto de um dos desenvolvedores." />
+                        <h4>Savio Araújo</h4>
+                        <p class="text-muted">Desenvolvedor Fullstack</p>
+                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/Sav1o" aria-label="Larry Parker Twitter Profile" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/savio-araujo-8737b1288/" aria-label="Larry Parker LinkedIn Profile" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="large text-muted">Somos muito gratos por todo conhecimento passado dentro e fora de sala e
+                        cursos. Graças aos grandes professores fomos capazes de produzir este portal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Fale Conosco</h2>
+                <h3 class="section-subheading text-muted">Achou um bug ou tem sugestões? Manda pra gente!</h3>
+            </div>
+            <!-- * * * * * * * * * * * * * * *-->
+            <!-- * * SB Forms Contact Form * *-->
+            <!-- * * * * * * * * * * * * * * *-->
+            <!-- This form is pre-integrated with SB Forms.-->
+            <!-- To make this form functional, sign up at-->
+            <!-- https://startbootstrap.com/solution/contact-forms-->
+            <!-- to get an API token!-->
+            <!--COLOCA SEU EMAIL AQUI EMBAIXO-->
+            <form id="contactForm" action="https://formsubmit.co/ajax/eb8edffc6ad813a127869af594ef5de5" method="POST">
+                <div class="row align-items-stretch mb-5">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <!-- Name input-->
+                            <input class="form-control" id="name" name="Nome" type="text" placeholder="Seu Nome *"
+                                required />
+                            <div class="invalid-feedback" data-sb-feedback="name:required">Campo obrigatório.</div>
+                        </div>
+                        <div class="form-group">
+                            <!-- Email address input-->
+                            <input class="form-control" id="email" name="Email" type="email" placeholder="Seu Email *"
+                                data-sb-validations="required,email" required />
+                            <div class="invalid-feedback" data-sb-feedback="email:required">Campo obrigatório.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email não é válido.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-group-textarea mb-md-0">
+                            <!-- Message input-->
+                            <textarea class="form-control" name="mensagem" id="message" placeholder="Sua Mensagem *"
+                                data-sb-validations="required" required></textarea>
+                            <div class="invalid-feedback" data-sb-feedback="message:required" required>Campo
+                                obrigatório.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Submit success message-->
+                <!---->
+                <div class="modal fade" id="submitSuccessModal" tabindex="-1" aria-labelledby="submitSuccessModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="submitSuccessModalLabel">Enviado com sucesso!</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="text-center text-white mb-3">
+                                    <div class="fw-bolder">Enviado com sucesso!</div>
+                                    Para ativar este formulário, inscreva-se em
+                                    <br />
+                                    <a
+                                        href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- This is what your users will see when the form-->
+                <!-- has successfully submitted-->
+                <!-- Submit error message-->
+                <!---->
+                <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Erro ao enviar mensagem!</div>
+                </div>
+                <!-- This is what your users will see when there is-->
+                <!-- an error submitting the form-->
+                <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Erro ao enviar mensagem!</div>
+                </div>
+                <!-- Submit Button-->
+                <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton"
+                        type="submit">Enviar</button></div>
+            </form>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">Copyright &copy; EcoBit 2023</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none me-3" href="#!">Politica de Privacidade</a>
+                    <a class="link-dark text-decoration-none" href="#!">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals-->
+    <!-- MODAL DE CADASTRO DE LOCAL-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- CORPO DO MODAL-->
+                                <form id="local" th:action="@{/savePonto}" method="post">
+                                    <h2 class="text-uppercase">Ponto de Coleta</h2>
+                                    <p class="item-intro text-muted">Cadastre um ponto e ajude-nos a crescer!</p>
+                                    <div id="form_input_local">
+                                        <label for="local_name" class="form_inputs"><strong>Nome do
+                                                Local</strong></label>
+                                        <input id="local_name" class="form-control" name="nomePonto" type="text"
+                                            placeholder="Padaria do Bairro" required><br>
+                                        <label for="lolcal_address"><strong>Endereço</strong></label>
+                                        <input id="lolcal_address" class="form-control" name="enderecoPonto" type="text"
+                                            placeholder="Rua Verde, Centro" required><br>
+                                        <label for="local_number"><strong>Número</strong></label>
+                                        <input id="local_number" class="form-control" name="numeroPonto" type="text"
+                                            placeholder="123" required><br>
+                                        <select class="form-control" name="materialPonto" required>
+                                            <option value="">Selecione o Material</option>
+                                            <option value="papel">Papel</option>
+                                            <option value="plastico">Plástico</option>
+                                            <option value="vidro">Vidro</option>
+                                            <option value="metal">Metal</option>
+                                            <option value="organico">Orgânico</option>
+                                            <option value="bateria">Bateria</option>
+                                            <option value="pilha">Pilha</option>
+                                            <option value="eletronico">Sucata Eletrônica</option>
+                                        </select><br>
+                                        <input type="file" name="local_photo" id="local_photo">
+                                    </div><br>
+                                    <button th:action="@{/savePonto}" id="local_submit_btn"
+                                        class="btn btn-primary btn-xl text-uppercase " value="Enviar Cadastro"
+                                        type="submit">
+                                        Enviar
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE CADASTRO DE EMPRESA-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- CORPO DO MODAL-->
+                                <form id="company" th:action="@{/save}" method="post">
+                                    <h2 class="text-uppercase">Empresa de Coleta</h2>
+                                    <p class="item-intro text-muted">Cadastre sua empresa e ajude-nos a crescer!</p>
+                                    <div id="form_input_company">
+                                        <label for="company_cnpj" class="form_inputs"><strong>CNPJ</strong></label>
+                                        <input name="CNPJ" id="company_cnpj" onblur="checkCNPJ(this.value)"
+                                            class="form-control" type="text" placeholder="00.000.000/0000-00"
+                                            required><br>
+                                        <label for="lolcal_address"><strong>Endereço</strong></label>
+                                        <input name="endereco" id="logradourojs" class="form-control" type="text"
+                                            placeholder="Rua Verde, Centro" required><br>
+                                        <label for="local_number"><strong>Número</strong></label>
+                                        <input name="numero" id="numerojs" class="form-control" type="number"
+                                            placeholder="123" required><br>
+                                        <select class="form-control" name="material" required>
+                                            <option value="">Selecione o Material</option>
+                                            <option value="papel">Papel</option>
+                                            <option value="plastico">Plástico</option>
+                                            <option value="vidro">Vidro</option>
+                                            <option value="metal">Metal</option>
+                                            <option value="organico">Orgânico</option>
+                                            <option value="bateria">Bateria</option>
+                                            <option value="pilha">Pilha</option>
+                                            <option value="eletronico">Sucata Eletrônica</option>
+                                        </select><br>
+                                        <label for="opening_hours"><strong>Horário de Funcionamento</strong></label>
+                                        <div class="checkbox-dias-semana">
+                                            <input name="dataEmpresa" type="checkbox" id="domingo">
+                                            <label for="domingo">D</label>
+                                            <input name="dataEmpresa" type="checkbox" id="segunda" checked>
+                                            <label for="segunda">S</label>
+                                            <input name="dataEmpresa" type="checkbox" id="terca" checked>
+                                            <label for="terca">T</label>
+                                            <input name="dataEmpresa" type="checkbox" id="quarta" checked>
+                                            <label for="quarta">Q</label>
+                                            <input name="dataEmpresa" type="checkbox" id="quinta" checked>
+                                            <label for="quinta">Q</label>
+                                            <input name="dataEmpresa" type="checkbox" id="sexta" checked>
+                                            <label for="sexta">S</label>
+                                            <input name="dataEmpresa" type="checkbox" id="sabado">
+                                            <label for="sabado">S</label>
+                                        </div><br>
+                                        <div class="horario">
+                                            <label for="horaAbertura">Horário de abertura:</label>
+                                            <input name="horaAbertura" type="text" class="input-hora" id="horaAbertura"
+                                                placeholder="00:00" required>
+                                            <label for="horaFechamento">Horário de fechamento:</label>
+                                            <input name="horaFechamento" type="text" class="input-hora"
+                                                id="horaFechamento" placeholder="00:00" required>
+                                        </div>
+                                    </div><br>
+                                    <button th:action="@{/save}" id="company_submit_btn"
+                                        class="btn btn-primary btn-xl text-uppercase " type="submit">
+                                        Enviar
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL COM LISTA DOS LOCAIS CADASTRADOS -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- CORPO DO MODAL-->
+                                <h2 class="text-uppercase">Pesquisar locais</h2>
+                                <br>
+                                <form id="searchForm" method="get">
+                                    <select class="form-control" id="materialPonto" name="materialPonto" required>
+                                        <option value="">Selecione o Material</option>
+                                        <option value="papel">Papel</option>
+                                        <option value="plastico">Plástico</option>
+                                        <option value="vidro">Vidro</option>
+                                        <option value="metal">Metal</option>
+                                        <option value="organico">Orgânico</option>
+                                        <option value="bateria">Bateria</option>
+                                        <option value="pilha">Pilha</option>
+                                        <option value="eletronico">Sucata Eletrônica</option>
+                                    </select><br>
+                                    <button id="searchPontoBtn" class="btn btn-primary btn-xl text-uppercase"
+                                        type="button">
+                                        Buscar Ponto
+                                    </button>
+                                    <button id="searchEmpresaBtn" class="btn btn-primary btn-xl text-uppercase"
+                                        type="button">
+                                        Buscar Empresa
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL DE CADASTRO BEM SUCEDIDO-->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- CORPO DO MODAL-->
+                                <h2 class="text-uppercase">Cadastro realizado com sucesso!</h2>
+                                <img class="img-fluid d-block mx-auto" id="valid"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA4o-FiQAUBqh8qX6rR7PesBhOx7Va5flptA&usqp=CAU"
+                                    alt="..." />
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    Valeu!
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL DE CADASTRO FALHO-->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- CORPO DO MODAL-->
+                                <h2 class="text-uppercase">OPS...</h2><br>
+                                <h2 class="text-uppercase">CNPJ Inválido</h2><br>
+                                <img class="img-fluid d-block mx-auto" id="invalid"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1UIIeDg8OZlT3EasaVQsANNvw5mgURjT5XOSnLYKv7o9BXiMw9fzni9Jk3JyZ4piP8Pg&usqp=CAU"
+                                    alt="..." />
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button" >
+                                    fechar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script th:src="@{/script/script.js}"></script>
+    <script th:src="@{/script/app.js}"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+    <script>document.getElementById('searchPontoBtn').addEventListener('click', function () {
+            document.getElementById('searchForm').setAttribute('action', '/procurarPonto');
+            document.getElementById('searchForm').submit();
+        });
+
+        document.getElementById('searchEmpresaBtn').addEventListener('click', function () {
+            var materialPonto = document.getElementById('materialPonto').value;
+
+            // Cria um input escondido para enviar o parâmetro material
+            var materialInput = document.createElement('input');
+            materialInput.setAttribute('type', 'hidden');
+            materialInput.setAttribute('name', 'material');
+            materialInput.setAttribute('value', materialPonto);
+
+            // Adiciona o input escondido ao formulário
+            document.getElementById('searchForm').appendChild(materialInput);
+
+            // Define a ação do formulário para o endpoint /procura
+            document.getElementById('searchForm').setAttribute('action', '/procura');
+
+            // Define o método como POST
+            document.getElementById('searchForm').setAttribute('method', 'get');
+
+            document.getElementById('searchForm').submit();
+        });
+
+    </script>
+
+</body>
+
+</html>
